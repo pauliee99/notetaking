@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-29T14:30:17.240Z" agent="5.0 (Windows)" etag="VzDCdeZF3rBMsR15-PEP" version="14.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-29T20:40:43.921Z" agent="5.0 (Windows)" etag="PYtdEtsUYLrLFJVcyHA4" version="14.3.1" type="github">
   <diagram id="w7zwQQ-e7MEviPHY8NQ5" name="Page-1">
     <mxGraphModel dx="868" dy="440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -25,11 +25,17 @@
         <mxCell id="HTgaUMEMDEaOwpnEh1lh-4" value="notes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="340" y="230" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="HTgaUMEMDEaOwpnEh1lh-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HTgaUMEMDEaOwpnEh1lh-6" target="HTgaUMEMDEaOwpnEh1lh-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="HTgaUMEMDEaOwpnEh1lh-6" value="add-btn" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="250" y="330" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HTgaUMEMDEaOwpnEh1lh-8" value="note-item" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="425" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HTgaUMEMDEaOwpnEh1lh-10" value="add-note-from" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="420" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
