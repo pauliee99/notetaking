@@ -11,7 +11,7 @@ export class AddNoteFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    document.getElementById("overlay")!.style.display = "block";
+    //document.getElementById("overlay")!.style.display = "block";
   }
 
 }

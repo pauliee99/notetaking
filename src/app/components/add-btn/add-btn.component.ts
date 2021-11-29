@@ -15,9 +15,10 @@ export class AddBtnComponent implements OnInit {
   }
 
   onClick(){
-    document.getElementById("overlay")!.style.display = "block";
+    
     this.btnClick.emit();
-    return `<app-add-note-form></app-add-note-form>`
+    document.getElementById("overlay")!.style.display = "block";
+    //return `<app-add-note-form></app-add-note-form>`
   }
 
 }

@@ -1,13 +1,19 @@
 
 <!--add button -->
 <div class="add">
-    <button class="addbutton" type="button" (click)="onClick()">
+    <button class="addbutton" type="button" (click)="onClick()"><app-add-note-form></app-add-note-form>
       <div class="circle">
         <div class="before"></div>
         <div class="after"></div>
       </div>
     </button>
 <div id="cross"></div>
+
+<!-- <div id="overlay" onclick="off()">
+  <form>
+    
+  </form>
+</div> -->
 
 <!-- <div id="form-render" *ngIf="display">
   <app-add-note-form></app-add-note-form>
