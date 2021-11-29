@@ -10,9 +10,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void{}
 
-  toggleAddNote() {
-    console.log('add a note');
-  }
+
+
 }
 export class addNote {
 

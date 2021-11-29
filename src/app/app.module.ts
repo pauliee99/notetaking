@@ -7,7 +7,8 @@ import { NotesComponent } from './components/notes/notes.component';
 import { AddBtnComponent } from './components/add-btn/add-btn.component';
 import { NoteItemComponent } from './components/note-item/note-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; //x button
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { AddNoteFormComponent } from './components/add-note-form/add-note-form.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule} from '@angular/common/http'
     HeaderComponent,
     NotesComponent,
     AddBtnComponent,
-    NoteItemComponent
+    NoteItemComponent,
+    AddNoteFormComponent
   ],
   imports: [
     BrowserModule,

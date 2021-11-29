@@ -7,6 +7,7 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 })
 export class AddBtnComponent implements OnInit {
   @Output() btnClick = new EventEmitter();
+  @Input() formClick = new EventEmitter();
 
   constructor() { }
 
@@ -16,6 +17,7 @@ export class AddBtnComponent implements OnInit {
   onClick(){
     document.getElementById("overlay")!.style.display = "block";
     this.btnClick.emit();
+    return `<app-add-note-form></app-add-note-form>`
   }
 
 }
