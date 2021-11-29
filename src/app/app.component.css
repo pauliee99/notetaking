@@ -1,0 +1,29 @@
+.welcome {
+    font-family:'Brush Script MT';
+    font-size:30px;
+    position:relative;
+    left: 20px;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.add {
+    position:relative;
+    left: 1100px;
+    top: 550px;
+}
+.img {
+    position:relative;
+    left: 10px;
+}
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #fffd6e;
+    color: white;
+    font-weight: 600;
+  }

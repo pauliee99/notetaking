@@ -1,0 +1,2 @@
+<app-add-btn (btnClick)="toggleAddNote()"></app-add-btn>
+<app-note-item *ngFor="let note of notes" [note]="note" (onDeleteNote)="deleteNote(note)"></app-note-item>
