@@ -7,7 +7,7 @@
 .addbutton {
     width: 56px;
     height: 56px;
-    position: relative;
+    position: fixed;
     border-radius: 50%;
     /*border: 2px solid #fff;*/
     background-color: rgb(85, 85, 85);

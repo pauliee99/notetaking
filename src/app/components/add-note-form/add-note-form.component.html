@@ -1,6 +1,15 @@
-<div id="overlay" onclick="off()"></div>
-  <div id="form"> here!
-    <form >
-        
+<div id="overlay" onclick="off()">
+  <div id="form" >
+    <form class="add-form" (ngSubmit)="onSubmit()">
+      <div class="form-control">
+        <label for="name" id="namelabel">Name:</label><br>
+        <input type="text" id="nametext" name="nametext" placeholder="Name of the Note"><br>
+      </div>
+      <div class="form-control">
+        <label for="note">Note:</label><br>
+        <textarea placeholder="Type your note here..."></textarea><br><br>
+      </div>
+      <input type="submit" value="Submit">
     </form>
+</div>
 </div>

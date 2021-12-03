@@ -17,12 +17,6 @@
       "name": "note3",
       "date": "01/5/1243",
       "msg": "this is a third dummy msg"
-    },
-    {
-      "id": 4,
-      "name": "note4",
-      "date": "01/5/1243",
-      "msg": "this is the fourth dummy msg"
     }
   ]
 }
