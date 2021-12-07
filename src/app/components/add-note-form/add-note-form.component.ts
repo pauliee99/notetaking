@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Note } from '../../Note'
 
 @Component({
   selector: 'app-add-note-form',
@@ -6,8 +7,8 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
   styleUrls: ['./add-note-form.component.css']
 })
 export class AddNoteFormComponent implements OnInit {
-  @Output() btnClick = new EventEmitter();
-  nametext!: String;
+  @Output() onBtnClick = new EventEmitter();
+  nametext!: String; //to bind to te ngModel in html
   notetext!: String;
 
   constructor() { }
@@ -17,7 +18,6 @@ export class AddNoteFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.nametext)
     if (!this.nametext) {
       alert('Please add a note!');
       return;
@@ -28,7 +28,7 @@ export class AddNoteFormComponent implements OnInit {
       day: this.notetext,
     };
 
-    this.btnClick.emit(newNote);
+    this.onBtnClick.emit(newNote);
 
     this.nametext = '';
     this.notetext = '';

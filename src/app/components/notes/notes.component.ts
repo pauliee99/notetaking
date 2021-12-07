@@ -26,4 +26,8 @@ export class NotesComponent implements OnInit {
     console.log('add a note');
   }
 
+  addNote(note: Note) {
+    this.noteService.addNote(note).subscribe((note) => (this.notes.push(note)));
+  }
+
 }
