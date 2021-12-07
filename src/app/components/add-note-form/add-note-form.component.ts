@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { concat } from 'rxjs';
 import { Note } from '../../Note'
 
 @Component({
@@ -23,9 +24,19 @@ export class AddNoteFormComponent implements OnInit {
       return;
     }
 
+    var timestamp = 1301090400,
+    date = new Date(),
+    datevalues = 
+      date.getFullYear() + "/"+
+      [date.getMonth()+1]+ "/"+
+      date.getDay()+ "-"+
+      date.getHours()+ ":"+
+      date.getMinutes()+":"+
+      date.getSeconds();
+
     const newNote = {
       name: this.nametext,
-      date: new Date().valueOf(),
+      date: datevalues,
       msg: this.notetext,
     };
 
@@ -33,6 +44,7 @@ export class AddNoteFormComponent implements OnInit {
 
     this.nametext = '';
     this.notetext = '';
-   }
+  }
+
 
 }
