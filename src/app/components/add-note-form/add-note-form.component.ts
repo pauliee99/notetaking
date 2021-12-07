@@ -7,7 +7,7 @@ import { Note } from '../../Note'
   styleUrls: ['./add-note-form.component.css']
 })
 export class AddNoteFormComponent implements OnInit {
-  @Output() onBtnClick = new EventEmitter();
+  @Output() onAddNote = new EventEmitter();
   nametext!: String; //to bind to te ngModel in html
   notetext!: String;
 
@@ -28,7 +28,7 @@ export class AddNoteFormComponent implements OnInit {
       day: this.notetext,
     };
 
-    this.onBtnClick.emit(newNote);
+    this.onAddNote.emit(newNote);
 
     this.nametext = '';
     this.notetext = '';
