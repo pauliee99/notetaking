@@ -24,8 +24,9 @@ export class AddNoteFormComponent implements OnInit {
     }
 
     const newNote = {
-      nametext: this.nametext,
-      day: this.notetext,
+      name: this.nametext,
+      date: new Date().valueOf(),
+      msg: this.notetext,
     };
 
     this.onAddNote.emit(newNote);
