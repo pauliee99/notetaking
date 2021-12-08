@@ -4,11 +4,15 @@
     padding: 10px 20px;
     cursor: pointer;
   }
-
   
   .note h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
+#date {
+  font-size: 15px;
+  color: rgba(58, 58, 58, 0.815);
+}
   
