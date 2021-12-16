@@ -30,4 +30,9 @@ export class NoteServiceService {
   addNote(note: Note): Observable<Note> {
     return this.http.post<Note>(this.apiUrl, note, httpOptions)
   }
+
+  updateNote(note: Note): Observable<Note> {
+    console.log(note)
+    return this.http.put<Note>(this.apiUrl+"/"+note.id, note, httpOptions)
+  }
 }

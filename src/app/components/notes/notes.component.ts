@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/services/note-service.service';
 import {Note} from '../../Note';
 //import {NOTES} from '../../hardcoded-notes';
@@ -10,6 +10,7 @@ import {Note} from '../../Note';
 })
 export class NotesComponent implements OnInit {
   notes: Note[] = []; //initialize
+  @Input() onUpdateNote: EventEmitter<Note> = new EventEmitter;
   //notes2: Note[] = NOTES; //hardcoded notes
 
   constructor(private noteService: NoteServiceService) { }
@@ -30,7 +31,8 @@ export class NotesComponent implements OnInit {
   }
 
   updateNote(note:Note){
-    console.log(note);
+    //this.noteService.updateNote(note).subscribe((note) => (this.notes.push(note)));
+    this.noteService.updateNote(note).subscribe(() => (this.notes = this.notes.filter((n) => n.id !== note.id)));
   }
 
   get sortData() {

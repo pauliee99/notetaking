@@ -1,28 +1,22 @@
 {
   "notes": [
     {
-      "name": "note1",
-      "date": "2019-08-15 17:28:30.0",
-      "msg": "this is the first dummy msg",
+      "name": "note 1",
+      "date": "2021-12-5 0:10:18",
+      "msg": "this is the first dummy message\n",
       "id": 1
     },
     {
-      "name": "note3",
-      "date": "2020-08-15 17:28:30.0",
-      "msg": "this is a third dummy msg",
+      "name": "note 2",
+      "date": "2021-12-5 0:10:34",
+      "msg": "this is a second dummy message",
+      "id": 2
+    },
+    {
+      "name": "note 3",
+      "date": "2021-12-5 0:11:22",
+      "msg": "this is a third dummy message",
       "id": 3
-    },
-    {
-      "name": "note 4",
-      "date": "2021-12-4 14:54:50",
-      "msg": "this is a forth dummy msg",
-      "id": 4
-    },
-    {
-      "name": "note2 ",
-      "date": "2021-12-4 14:57:13",
-      "msg": "this is a second dummy msg",
-      "id": 5
     }
   ]
 }

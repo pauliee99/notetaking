@@ -30,9 +30,9 @@ export class NoteItemComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(note => {
       this.onUpdateNote.emit(note.data);
-      console.log(note.data);
+      console.log("afterclosed "+note.data.msg);
     });
-    this.onUpdateNote.emit(note);
+    //this.onUpdateNote.emit(note);
   }
 
 }

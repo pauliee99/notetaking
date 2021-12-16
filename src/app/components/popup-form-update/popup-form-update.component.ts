@@ -16,7 +16,6 @@ export class PopupFormUpdateComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef: MatDialogRef<Note>) { }
 
   ngOnInit(): void {
-    console.log(this.nametext);
   }
 
   onSubmit() {
@@ -35,7 +34,6 @@ export class PopupFormUpdateComponent implements OnInit {
       date: datevalues,
       msg: this.notetext,
     };
-
     this.dialogRef.close({data:updateNote});
   }
 
