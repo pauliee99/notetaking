@@ -2,4 +2,4 @@
 <app-add-note-form (onAddNote)="addNote($event)"></app-add-note-form>
 <!-- addNote($event) -->
 <!-- toggleAddNote() -->
-<app-note-item *ngFor="let note of notes" [note]="note" (onDeleteNote)="deleteNote(note)"></app-note-item>
+<app-note-item *ngFor="let note of notes" [note]="note" (onDeleteNote)="deleteNote(note)" (onUpdate)="updateNote(note)"></app-note-item>

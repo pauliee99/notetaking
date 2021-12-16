@@ -12,7 +12,8 @@ import { NoteItemComponent } from './components/note-item/note-item.component';
 import { AddNoteFormComponent } from './components/add-note-form/add-note-form.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PopupFormComponent } from './components/popup-form/popup-form.component'
+import { PopupFormComponent } from './components/popup-form/popup-form.component';
+import { PopupFormUpdateComponent } from './components/popup-form-update/popup-form-update.component'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { PopupFormComponent } from './components/popup-form/popup-form.component
     AddBtnComponent,
     NoteItemComponent,
     AddNoteFormComponent,
-    PopupFormComponent
+    PopupFormComponent,
+    PopupFormUpdateComponent
   ],
   imports: [
     BrowserModule,

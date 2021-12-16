@@ -27,9 +27,9 @@ export class PopupFormComponent implements OnInit {
     var timestamp = 1301090400,
     date = new Date(),
     datevalues = 
-      date.getFullYear() + "/"+
-      [date.getMonth()+1]+ "/"+
-      date.getDay()+ "-"+
+      date.getFullYear() + "-"+
+      [date.getMonth()+1]+ "-"+
+      date.getDay()+ " "+
       date.getHours()+ ":"+
       date.getMinutes()+":"+
       date.getSeconds();

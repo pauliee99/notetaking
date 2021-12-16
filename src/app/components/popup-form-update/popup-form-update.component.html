@@ -1,0 +1,11 @@
+<form class="add-form" (ngSubmit)="onSubmit()" *ngIf="data">
+    <div class="form-control">
+      <label for="name" id="namelabel">Name:</label><br>
+      <input type="text" [(ngModel)]="nametext" id="nametext" name="nametext" placeholder={{nametext}}><br>
+    </div>
+    <div class="form-control">
+      <label for="note">Note:</label><br>
+      <textarea [(ngModel)]="notetext" name="notetext" placeholder={{notetext}}></textarea><br><br>
+    </div>
+    <input type="submit" value="Submit" >
+  </form>

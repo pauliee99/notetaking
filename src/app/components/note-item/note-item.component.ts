@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Note} from '../../Note';
 //import {NOTES} from '../../hardcoded-notes';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupFormUpdateComponent } from '../popup-form-update/popup-form-update.component';
 
 @Component({
   selector: 'app-note-item',
@@ -11,9 +13,10 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class NoteItemComponent implements OnInit {
   @Input() note!: Note;
   @Output() onDeleteNote: EventEmitter<Note> = new EventEmitter;
+  @Output() onUpdateNote: EventEmitter<Note> = new EventEmitter;
   faTimes = faTimes;
 
-  constructor() { }
+  constructor(private dialog : MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -22,8 +25,14 @@ export class NoteItemComponent implements OnInit {
     this.onDeleteNote.emit(note);
   }
 
-  testFunc() {
-    console.log(123);
+  onUpdate(note: Note) {
+    let dialogRef = this.dialog.open(PopupFormUpdateComponent, { data: { note } });
+
+    dialogRef.afterClosed().subscribe(note => {
+      this.onUpdateNote.emit(note.data);
+      console.log(note.data);
+    });
+    this.onUpdateNote.emit(note);
   }
 
 }

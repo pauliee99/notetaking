@@ -1,4 +1,4 @@
-<div class="note">
-    <h3>{{note.name}} <p id="date">{{ note.date }}</p> <fa-icon id="x" (click)="onDelete(note)" [icon]="faTimes" (mouseover)="testFunc()"></fa-icon></h3>
+<div class="note" (click)="onUpdate(note)">
+    <h3>{{note.name}} <p id="date">{{ note.date }}</p> <fa-icon id="x" (click)="onDelete(note)" [icon]="faTimes"></fa-icon></h3>
     <p>{{note.msg}}</p>
 </div>

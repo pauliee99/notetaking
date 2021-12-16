@@ -16,19 +16,28 @@ export class NotesComponent implements OnInit {
 
   ngOnInit(): void {
     //this.notes = this.noteService.getNotes()
+    // get all notes
     this.noteService.getNotes().subscribe((notes) => (this.notes = notes)); //to use it as an observable
+    this.sortData;
   }
 
   deleteNote(note: Note) {
     this.noteService.deleteNote(note).subscribe(() => (this.notes = this.notes.filter((n) => n.id !== note.id)));
   }
 
-  toggleAddNote() {
-    console.log('add a note');
-  }
-
   addNote(note: Note) {
     this.noteService.addNote(note).subscribe((note) => (this.notes.push(note)));
+  }
+
+  updateNote(note:Note){
+    console.log(note);
+  }
+
+  get sortData() {
+    return this.noteService.getNotes().subscribe((notes) => (this.notes.sort((a, b) => {
+      return <any>new Date(b.date) - <any>new Date(a.date);
+    })
+    ));
   }
 
 }
