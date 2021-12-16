@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Note} from '../../Note';
+//import {NOTES} from '../../hardcoded-notes';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

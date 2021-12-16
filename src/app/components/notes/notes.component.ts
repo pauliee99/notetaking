@@ -10,6 +10,7 @@ import {Note} from '../../Note';
 })
 export class NotesComponent implements OnInit {
   notes: Note[] = []; //initialize
+  //notes2: Note[] = NOTES; //hardcoded notes
 
   constructor(private noteService: NoteServiceService) { }
 

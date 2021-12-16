@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 import { concat } from 'rxjs';
 import { Note } from '../../Note'
 
@@ -13,6 +14,7 @@ export class AddNoteFormComponent implements OnInit {
   notetext!: String;
 
   constructor() { }
+  //constructor(private dialogRef: MatDialog) { }
 
   ngOnInit(): void {
     //document.getElementById("overlay")!.style.display = "block";

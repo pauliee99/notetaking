@@ -9,7 +9,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { AddBtnComponent } from './components/add-btn/add-btn.component';
 import { NoteItemComponent } from './components/note-item/note-item.component';
-import { AddNoteFormComponent } from './components/add-note-form/add-note-form.component'
+import { AddNoteFormComponent } from './components/add-note-form/add-note-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopupFormComponent } from './components/popup-form/popup-form.component'
 
 
 @NgModule({
@@ -19,13 +22,16 @@ import { AddNoteFormComponent } from './components/add-note-form/add-note-form.c
     NotesComponent,
     AddBtnComponent,
     NoteItemComponent,
-    AddNoteFormComponent
+    AddNoteFormComponent,
+    PopupFormComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
