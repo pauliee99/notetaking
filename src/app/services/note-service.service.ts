@@ -3,6 +3,7 @@ import {Note} from '../Note';
 // import {NOTES} from '../hardcoded-notes';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Activity } from '../Activity';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -32,7 +33,18 @@ export class NoteServiceService {
   }
 
   updateNote(note: Note): Observable<Note> {
-    console.log(note)
-    return this.http.put<Note>(this.apiUrl+"/"+note.id, note, httpOptions)
+    const url = `${this.apiUrl}/${note.id}`;
+    return this.http.put<Note>(url, note, httpOptions);
   }
+
+  getNote(note: Note): Observable<Note> {
+    const url = `${this.apiUrl}/${note.id}`;
+    return this.http.get<Note>(url);
+  }
+
+  //bore api
+  // getActivity(): Observable<Activity> {
+  //   const url = 'http://www.boredapi.com/api/activity/'
+  //   return this.http.get<Activity>(url);
+  // }
 }

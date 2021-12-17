@@ -30,13 +30,18 @@ export class NotesComponent implements OnInit {
     this.noteService.addNote(note).subscribe((note) => (this.notes.push(note)));
   }
 
+  getNote(note:Note) {
+    this.noteService.getNote(note).subscribe((note) => (note));
+  }
+
   updateNote(note:Note){
     //this.noteService.updateNote(note).subscribe((note) => (this.notes.push(note)));
-    this.noteService.updateNote(note).subscribe(() => (this.notes = this.notes.filter((n) => n.id !== note.id)));
+    console.log(note.id);
+    this.noteService.updateNote(note).subscribe((note) => (this.notes = this.notes.filter((n) => n.id !== note.id)));
   }
 
   get sortData() {
-    return this.noteService.getNotes().subscribe((notes) => (this.notes.sort((a, b) => {
+    return this.noteService.getNotes().subscribe(() => (this.notes.sort((a, b) => {
       return <any>new Date(b.date) - <any>new Date(a.date);
     })
     ));

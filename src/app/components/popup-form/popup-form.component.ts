@@ -12,6 +12,7 @@ export class PopupFormComponent implements OnInit {
   nametext!: String; //to bind to te ngModel in html
   notetext!: String;
   date!: String;
+  id!: Number;
   
   constructor(private dialogRef: MatDialogRef<Note>) { }
 

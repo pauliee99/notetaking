@@ -1,3 +1,6 @@
+//
+// THIS COMPONENT IS CURRENTLY NOT USED
+//
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 import { concat } from 'rxjs';

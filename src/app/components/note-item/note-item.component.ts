@@ -14,6 +14,7 @@ export class NoteItemComponent implements OnInit {
   @Input() note!: Note;
   @Output() onDeleteNote: EventEmitter<Note> = new EventEmitter;
   @Output() onUpdateNote: EventEmitter<Note> = new EventEmitter;
+  @Output() onGetNote: EventEmitter<Note> = new EventEmitter;
   faTimes = faTimes;
 
   constructor(private dialog : MatDialog) { }
@@ -27,12 +28,10 @@ export class NoteItemComponent implements OnInit {
 
   onUpdate(note: Note) {
     let dialogRef = this.dialog.open(PopupFormUpdateComponent, { data: { note } });
-
-    dialogRef.afterClosed().subscribe(note => {
+    dialogRef.afterClosed().subscribe((note) => {
       this.onUpdateNote.emit(note.data);
-      console.log("afterclosed "+note.data.msg);
+      console.log(note);
     });
-    //this.onUpdateNote.emit(note);
   }
 
 }
